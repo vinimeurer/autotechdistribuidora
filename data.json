@@ -1,0 +1,228 @@
+{
+    "produtos": [
+        {
+            "nome": "Antena PX Argentina Black",
+            "tipo": "Antenas",
+            "codigo": ["2025"],
+            "descricao": "Antena PX Argentina Black",
+            "imagem": "./produtos/antenas/2025.jpg"
+        },
+        {
+            "nome": "Antena PX Argentina Mini Black",
+            "tipo": "Antenas",
+            "codigo": ["2027"],
+            "descricao": "Antena PX Argentina Mini Black",
+            "imagem": "./produtos/antenas/2027.jpg"
+        },
+        {
+            "nome": "Haste Teto AM/FM",
+            "tipo": "Antenas",
+            "codigo": ["2000"],
+            "descricao": "Haste Teto AM/FM",
+            "imagem": "./produtos/antenas/2000.jpg"
+        },
+        {
+            "nome": "Antena Móvel VHF 1/4 Onda",
+            "tipo": "Antenas",
+            "codigo": ["186"],
+            "descricao": "Antena Móvel VHF 1/4 Onda",
+            "imagem": "./produtos/antenas/186.jpg"
+        },
+        {
+            "nome": "Suporte Ant Daf CF Dianteiro",
+            "tipo": "suportes",
+            "codigo": ["932 (Carona)", "931 (Motorista)"],
+            "descricao": "Suporte Ant Daf CF Dianteiro",
+            "imagem": "./produtos/suportes/932_931.jpg"
+        },
+        {
+            "nome": "Suporte Ant Daf XF 530 até 2022",
+            "tipo": "suportes",
+            "codigo": ["24112 (Motorista)"],
+            "descricao": "Suporte Ant Daf XF 530 até 2022",
+            "imagem": "./produtos/suportes/24112.jpg"
+        },
+        {
+            "nome": "Suporte Ant Cargo Frontal",
+            "tipo": "suportes",
+            "codigo": ["2826 (Motorista)", "2825 (Carona)"],
+            "descricao": "Suporte Ant Cargo Frontal",
+            "imagem": "./produtos/suportes/2825_2826.jpg"
+        },
+        {
+            "nome": "Suporte Ant MB Atego Dianteiro Coluna",
+            "tipo": "suportes",
+            "codigo": ["24108 (Motorista)", "24109 (Carona)"],
+            "descricao": "Suporte Ant MB Atego Dianteiro Coluna",
+            "imagem": "./produtos/suportes/24108_24109.jpg"
+        },
+        {
+            "nome": "Suporte Ant VW Constellation Dianteiro Capô",
+            "tipo": "suportes",
+            "codigo": ["3771 (Motorista)"],
+            "descricao": "Suporte Ant VW Constellation Dianteiro Capô",
+            "imagem": "./produtos/suportes/3771.jpg"
+        },
+        {
+            "nome": "Suporte Ant VW Constellation Diant",
+            "tipo": "suportes",
+            "codigo": ["2771 (Motorista)"],
+            "descricao": "Suporte Ant VW Constellation Diant",
+            "imagem": "./produtos/suportes/2771.jpg"
+        },
+        {
+            "nome": "Suporte Ant Volvo FH 2024/25 Dianteiro",
+            "tipo": "suportes",
+            "codigo": ["24115 (Motorista)", "24116 (Carona)"],
+            "descricao": "Suporte Ant Volvo FH 2024/25 Dianteiro",
+            "imagem": "./produtos/suportes/24115_24116.jpg"
+        },
+        {
+            "nome": "Suporte Ant Volvo FH Dianteiro",
+            "tipo": "suportes",
+            "codigo": ["2347 (Motorista)", "2346 (Carona)"],
+            "descricao": "Suporte Ant Volvo FH Dianteiro",
+            "imagem": "./produtos/suportes/2347_2346.jpg"
+        },
+        {
+            "nome": "Suporte Ant Scania Universal",
+            "tipo": "suportes",
+            "codigo": ["622"],
+            "descricao": "Suporte Ant Scania Universal",
+            "imagem": "./produtos/suportes/622.jpg"
+        },
+        {
+            "nome": "Suporte Ant Scania 124 R Dianteiro",
+            "tipo": "suportes",
+            "codigo": ["2410 (Motorista)", "2409 (Carona)"],
+            "descricao": "Suporte Ant Scania 124 R Dianteiro",
+            "imagem": "./produtos/suportes/2410_2409.jpg"
+        },
+        {
+            "nome": "Suporte Ant Scania 124 R/19 Dianteiro",
+            "tipo": "suportes",
+            "codigo": ["24102 (Motorista)", "24091 (Carona)"],
+            "descricao": "Suporte Ant Scania 124 R/19 Dianteiro",
+            "imagem": "./produtos/suportes/24102_24091.jpg"
+        },
+        {
+            "nome": "Suporte Ant Iveco Strallis Traseiro",
+            "tipo": "suportes",
+            "codigo": ["2748"],
+            "descricao": "Suporte Ant Iveco Strallis Traseiro",
+            "imagem": "./produtos/suportes/2748.jpg"
+        },
+        {
+            "nome": "Suporte Ant Iveco Strallis",
+            "tipo": "suportes",
+            "codigo": ["2989 (Motorista)", "2988 (Carona)"],
+            "descricao": "Suporte Ant Iveco Strallis",
+            "imagem": "./produtos/suportes/2989_2988.jpg"
+        },
+        {
+            "nome": "Suporte Ant Iveco S-Way Dianteiro",
+            "tipo": "suportes",
+            "codigo": ["925 (Motorista)", "926 (Carona)"],
+            "descricao": "Suporte Ant Iveco S-Way Dianteiro",
+            "imagem": "./produtos/suportes/925_926.jpg"
+        },
+        {
+            "nome": "Suporte Ant Iveco S-Way Traseiro",
+            "tipo": "suportes",
+            "codigo": ["927 (Motorista)", "928 (Carona)"],
+            "descricao": "Suporte Ant Iveco S-Way Traseiro",
+            "imagem": "./produtos/suportes/927_928.jpg"
+        },
+        {
+            "nome": "Cabo Coaxial 5,475M",
+            "tipo": "Acessórios PX e Espelhos",
+            "codigo": ["12"],
+            "descricao": "Cabo Coaxial 5,475M",
+            "imagem": "./produtos/acessorios_px_e_espelhos/12.jpg"
+        },
+        {
+            "nome": "Caixa Acústica Completa",
+            "tipo": "Acessórios PX e Espelhos",
+            "codigo": ["2885"],
+            "descricao": "Caixa Acústica Completa",
+            "imagem": "./produtos/acessorios_px_e_espelhos/2885.jpg"
+        },
+        {
+            "nome": "Kit De Montagem",
+            "tipo": "Acessórios PX e Espelhos",
+            "codigo": ["16"],
+            "descricao": "Kit De Montagem",
+            "imagem": "./produtos/acessorios_px_e_espelhos/16.jpg"
+        },
+        {
+            "nome": "Espelho Biônico 60MM",
+            "tipo": "Acessórios PX e Espelhos",
+            "codigo": ["10101"],
+            "descricao": "Espelho Biônico 60MM",
+            "imagem": "./produtos/acessorios_px_e_espelhos/10101.jpg"
+        },
+        {
+            "nome": "Espelho Biônico 90MM",
+            "tipo": "Acessórios PX e Espelhos",
+            "codigo": ["10102"],
+            "descricao": "Espelho Biônico 90MM",
+            "imagem": "./produtos/acessorios_px_e_espelhos/10102.jpg"
+        },
+        {
+            "nome": "Extensão PTT 4 Mt",
+            "tipo": "Acessórios PX e Espelhos",
+            "codigo": ["101018 (4 Pinos)", "101019 (5 Pinos)"],
+            "descricao": "Extensão PTT 4 Mt",
+            "imagem": "./produtos/acessorios_px_e_espelhos/101018_101019.jpg"
+        },
+        {
+            "nome": "Microfone PTT",
+            "tipo": "Acessórios PX e Espelhos",
+            "codigo": ["2867 (4 Pinos)", "2839 (5 Pinos)"],
+            "descricao": "Microfone PTT",
+            "imagem": "./produtos/acessorios_px_e_espelhos/2867_2839.jpg"
+        },
+        {
+            "nome": "Cabo Força P/Alimentação PX",
+            "tipo": "Acessórios PX e Espelhos",
+            "codigo": ["5533"],
+            "descricao": "Cabo Força P/Alimentação PX",
+            "imagem": "./produtos/acessorios_px_e_espelhos/5533.jpg"
+        },
+        {
+            "nome": "Suporte PTT Plástico",
+            "tipo": "Acessórios PX e Espelhos",
+            "codigo": ["2960"],
+            "descricao": "Suporte PTT Plástico",
+            "imagem": "./produtos/acessorios_px_e_espelhos/2960.jpg"
+        },
+        {
+            "nome": "Suporte PTT Ferro",
+            "tipo": "Acessórios PX e Espelhos",
+            "codigo": ["818"],
+            "descricao": "Suporte PTT Ferro",
+            "imagem": "./produtos/acessorios_px_e_espelhos/818.jpg"
+        },
+        {
+            "nome": "Buzina Verdureiro C/Compressor",
+            "tipo": "Acessórios de Buzina",
+            "codigo": ["3205"],
+            "descricao": "Buzina Verdureiro C/Compressor",
+            "imagem": "./produtos/acessorios_de_buzina/3205.jpg"
+        },
+        {
+            "nome": "Buzina De Trem 3 Cornetas",
+            "tipo": "Acessórios de Buzina",
+            "codigo": ["4183"],
+            "descricao": "Buzina De Trem 3 Cornetas",
+            "imagem": "./produtos/acessorios_de_buzina/4183.jpg"
+        },
+        {
+            "nome": "Buzina De Trem 4 Cornetas",
+            "tipo": "Acessórios de Buzina",
+            "codigo": ["5189"],
+            "descricao": "Buzina De Trem 4 Cornetas",
+            "imagem": "./produtos/acessorios_de_buzina/5189.jpg"
+        }
+    ]
+}

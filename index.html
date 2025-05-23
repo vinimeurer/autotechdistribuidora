@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Produtos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Nosso Catálogo</h1>
+        
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Buscar produto..." class="search-input">
+        </div>
+
+        <div class="action-buttons">
+            <button id="download-pdf" class="pdf-button">
+                <i class="fas fa-file-pdf"></i>
+                Baixar Catálogo em PDF
+            </button>
+        </div>
+
+        <div class="filter-buttons">
+            <!-- Filter buttons will be dynamically generated here -->
+        </div>
+
+        <div class="products-grid" id="products-container">
+            <!-- Products will be inserted here by JavaScript -->
+        </div>
+
+        <!-- <div class="whatsapp-button">
+            <a href="#" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+                    Entre em contato
+            </a>
+        </div> -->
+    </div>
+
+    <!-- Modal -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <!-- Modal content will be dynamically generated here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- PDF Template (hidden) -->
+    <div id="pdf-content" style="display: none;">
+        <!-- This will be populated when generating the PDF -->
+    </div>
+
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Gerando PDF, por favor aguarde...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
