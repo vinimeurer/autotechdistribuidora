@@ -158,10 +158,8 @@ function hideLoading() {
 
 // Função para gerar PDF do catálogo
 function generateCatalogPDF() {
-    // Show loading overlay instead of alert
     showLoading();
     
-    // Get all products
     loadMenuData().then(products => {
         if (!products || products.length === 0) {
             hideLoading();
@@ -172,8 +170,7 @@ function generateCatalogPDF() {
         // Create a temporary div for PDF content
         const pdfContainer = document.createElement('div');
         pdfContainer.id = 'temp-pdf-content';
-        pdfContainer.style.width = '190mm'; // Slightly narrower than A4
-        pdfContainer.style.padding = '0 10px';
+        pdfContainer.style.width = '190mm';
         document.body.appendChild(pdfContainer);
 
         // Add header
@@ -201,57 +198,64 @@ function generateCatalogPDF() {
             categories[category].push(product);
         });
 
-        // Add each category and its products with page breaks
+        // Add each category and its products with controlled pagination
         const categoryNames = Object.keys(categories).sort();
         
-        categoryNames.forEach((category, index) => {
-            // Add page break for each category (except the first)
-            if (index > 0) {
-                const pageBreak = document.createElement('div');
-                pageBreak.style.pageBreakBefore = 'always';
-                pageBreak.style.breakBefore = 'page';
-                pageBreak.style.height = '1px';
-                pdfContainer.appendChild(pageBreak);
-            }
+        let currentPage = pdfContainer;
+        let itemsOnCurrentPage = 0;
+        const ITEMS_PER_PAGE = 7;
+        
+        // Function to create a new page
+        function createNewPage() {
+            const newPage = document.createElement('div');
+            newPage.style.pageBreakBefore = 'always';
+            newPage.style.padding = '10mm 0';
+            pdfContainer.appendChild(newPage);
+            return newPage;
+        }
+        
+        categoryNames.forEach((category, categoryIndex) => {
+            const productsInCategory = categories[category];
             
-            // Add category header with more compact margins
-            const categoryDiv = document.createElement('div');
-            categoryDiv.style.pageBreakAfter = 'avoid';
-            categoryDiv.style.breakAfter = 'avoid';
-            categoryDiv.innerHTML = `
-                <h2 style="color: #333; border-bottom: 2px solid #333; padding-bottom: 6px; margin: 20px 0 15px 0; font-size: 22px;">
+            // For each category, create a category header
+            const categoryHeader = document.createElement('div');
+            categoryHeader.innerHTML = `
+                <h2 style="color: #333; border-bottom: 2px solid #333; padding-bottom: 6px; 
+                     margin: 20px 0 15px 0; font-size: 22px;">
                     ${category.charAt(0).toUpperCase() + category.slice(1)}
                 </h2>
             `;
-            pdfContainer.appendChild(categoryDiv);
             
-            // Create a wrapper for all products in this category
-            const productsWrapper = document.createElement('div');
-            pdfContainer.appendChild(productsWrapper);
+            // If adding category header would exceed items per page,
+            // or if it's not the first category, start a new page
+            if (itemsOnCurrentPage > 0 && (itemsOnCurrentPage >= ITEMS_PER_PAGE || categoryIndex > 0)) {
+                currentPage = createNewPage();
+                itemsOnCurrentPage = 0;
+            }
             
-            // Add products with improved layout and strict page break controls
-            categories[category].forEach(product => {
+            // Add category header to current page
+            currentPage.appendChild(categoryHeader);
+            
+            // Add products for this category
+            productsInCategory.forEach((product, productIndex) => {
                 // Create codes HTML
                 let codesHTML = '';
                 if (product.codigo && product.codigo.length) {
                     const codes = Array.isArray(product.codigo) ? product.codigo : [product.codigo];
                     codesHTML = codes.map(code => 
-                        `<span style="display: inline-block; background-color: #f0f0f0; padding: 3px 8px; border-radius: 3px; margin: 2px; font-size: 12px;">Código: ${code}</span>`
+                        `<span style="display: inline-block; background-color: #f0f0f0; padding: 3px 8px; 
+                         border-radius: 3px; margin: 2px; font-size: 12px;">Código: ${code}</span>`
                     ).join('');
                 }
-
-                // Create a wrapper for each product with strict page break controls
-                const productWrapper = document.createElement('div');
-                productWrapper.style.pageBreakInside = 'avoid';
-                productWrapper.style.breakInside = 'avoid';
-                productWrapper.style.display = 'block';
-                productWrapper.style.margin = '0 0 12px 0';
-                productWrapper.style.padding = '0';
-
-                productWrapper.innerHTML = `
-                    <div style="display: flex; padding: 8px; border: 1px solid #ddd; border-radius: 5px; page-break-inside: avoid !important; break-inside: avoid !important;">
+                
+                // Create product item
+                const productItem = document.createElement('div');
+                productItem.innerHTML = `
+                    <div style="display: flex; padding: 8px; border: 1px solid #ddd; border-radius: 5px; 
+                         margin-bottom: 10px; height: 105px;">
                         <div style="flex: 0 0 90px; margin-right: 10px;">
-                            <img src="${product.imagem}" style="width: 90px; height: 90px; object-fit: contain;" alt="${product.nome || 'Produto'}">
+                            <img src="${product.imagem}" style="width: 90px; height: 90px; object-fit: contain;" 
+                                 alt="${product.nome || 'Produto'}">
                         </div>
                         <div style="flex: 1; min-width: 0;">
                             <h3 style="margin-bottom: 3px; font-size: 15px;">${product.nome || 'Sem nome'}</h3>
@@ -263,20 +267,27 @@ function generateCatalogPDF() {
                     </div>
                 `;
                 
-                productsWrapper.appendChild(productWrapper);
+                // Increment counter
+                itemsOnCurrentPage++;
                 
-                // Add small spacer between products for cleaner page breaks
-                const spacer = document.createElement('div');
-                spacer.style.height = '2px';
-                productsWrapper.appendChild(spacer);
+                // Add product to current page
+                currentPage.appendChild(productItem);
+                
+                // If we've reached the limit per page and there are more products,
+                // start a new page for the next products
+                if (itemsOnCurrentPage >= ITEMS_PER_PAGE && 
+                   (productIndex < productsInCategory.length - 1 || categoryIndex < categoryNames.length - 1)) {
+                    currentPage = createNewPage();
+                    itemsOnCurrentPage = 0;
+                }
             });
         });
 
         // Wait for images to load
         setTimeout(() => {
-            // Generate PDF with adjusted margins and page break rules
+            // Generate PDF with fixed layout
             const opt = {
-                margin: [10, 10, 10, 10], // Reduced margins (top, right, bottom, left)
+                margin: [15, 15, 15, 15], // top, right, bottom, left
                 filename: 'catalogo-produtos.pdf',
                 image: { type: 'jpeg', quality: 0.95 },
                 html2canvas: { 
@@ -290,30 +301,20 @@ function generateCatalogPDF() {
                     format: 'a4', 
                     orientation: 'portrait',
                     compress: true
-                },
-                pagebreak: { 
-                    mode: ['avoid-all', 'css', 'legacy'],
-                    before: '.page-break-before',
-                    after: '.page-break-after',
-                    avoid: '.avoid-break'
                 }
             };
 
             html2pdf().from(pdfContainer).set(opt).save().then(() => {
-                // Hide loading overlay when done
                 hideLoading();
-                // Clean up - remove the temporary div
                 document.body.removeChild(pdfContainer);
             }).catch(err => {
-                // Hide loading overlay on error
                 hideLoading();
                 console.error('Erro ao gerar PDF:', err);
                 alert('Erro ao gerar o PDF. Verifique o console para mais detalhes.');
                 document.body.removeChild(pdfContainer);
             });
-        }, 1500); // Increased timeout for image loading
+        }, 1500);
     }).catch(err => {
-        // Hide loading overlay on error
         hideLoading();
         console.error('Erro ao carregar dados:', err);
         alert('Erro ao carregar os dados. Verifique o console para mais detalhes.');
