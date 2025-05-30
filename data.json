@@ -223,6 +223,325 @@
             "codigo": ["5189"],
             "descricao": "Buzina De Trem 4 Cornetas",
             "imagem": "./produtos/acessorios_de_buzina/5189.jpg"
+        },
+
+
+
+
+
+
+
+
+
+
+
+        {
+            "nome": "Buzina marítima 1000M com kit válvula e conexões",
+            "tipo": "Acessórios de Buzina",
+            "codigo": ["K10311CC"],
+            "descricao": "Buzina marítima 1000M com kit válvula e conexões",
+            "imagem": "./produtos/acessorios_de_buzina/K10311CC.jpg"
+        },
+        {
+            "nome": "Buzina marítima 740MM Com Kit Válvulas e Conexões",
+            "tipo": "Acessórios de Buzina",
+            "codigo": ["K10308CC"],
+            "descricao": "Buzina marítima 740MM Com Kit Válvulas e Conexões",
+            "imagem": "./produtos/acessorios_de_buzina/K10308CC.jpg"
+        },
+        {
+            "nome": "Buzina 2 Cornetas C/Valvula Metal Cromada Bivolts",
+            "tipo": "Acessórios de Buzina",
+            "codigo": ["K10046"],
+            "descricao": "Buzina 2 Cornetas C/Valvula Metal Cromada Bivolts",
+            "imagem": "./produtos/acessorios_de_buzina/K10046.jpg"
+        },
+        {
+            "nome": "Cabo USB/Tipo C De silicone 2 mts",
+            "tipo": "Acessórios eletrônicos, USB e Celulares",
+            "codigo": ["CB294"],
+            "descricao": "Cabo USB/Tipo C De silicone 2 mts",
+            "imagem": "./produtos/acessorios_eletronicos_usb_e_celulares/CB294.jpg"
+        },
+        {
+            "nome": "Bateria Botão CR2032",
+            "tipo": "Acessórios eletrônicos, USB e Celulares",
+            "codigo": ["Bat-01"],
+            "descricao": "Bateria Botão CR2032",
+            "imagem": "./produtos/acessorios_eletronicos_usb_e_celulares/BAT01.jpg"
+        },
+        {
+            "nome": "Placa Luminosa Led Uber",
+            "tipo": "Acessórios eletrônicos, USB e Celulares",
+            "codigo": ["PLA01"],
+            "descricao": "Placa Luminosa Led Uber",
+            "imagem": "./produtos/acessorios_eletronicos_usb_e_celulares/PLA01.jpg"
+        },
+        {
+            "nome": "Placa Luminosa Led APP 99",
+            "tipo": "Acessórios eletrônicos, USB e Celulares",
+            "codigo": ["PLA02"],
+            "descricao": "Placa Luminosa Led APP 99",
+            "imagem": "./produtos/acessorios_eletronicos_usb_e_celulares/PLA02.jpg"
+        },
+        {
+            "nome": "Suporte De Celular Para Pára-brisa Com Garra",
+            "tipo": "Acessórios eletrônicos, USB e Celulares",
+            "codigo": ["SU16"],
+            "descricao": "Suporte De Celular Para Pára-brisa Com Garra",
+            "imagem": "./produtos/acessorios_eletronicos_usb_e_celulares/SU16.jpg"
+        },
+        {
+            "nome": "Suporte Magnético 360° De Painel",
+            "tipo": "Acessórios eletrônicos, USB e Celulares",
+            "codigo": ["SU112"],
+            "descricao": "Suporte Magnético 360° De Painel",
+            "imagem": "./produtos/acessorios_eletronicos_usb_e_celulares/SU112.jpg"
+        },
+        {
+            "nome": "Cabo USB/iPhone De silicone 2 mts",
+            "tipo": "Acessórios eletrônicos, USB e Celulares",
+            "codigo": ["CB293"],
+            "descricao": "Cabo USB/iPhone De silicone 2 mts",
+            "imagem": "./produtos/acessorios_eletronicos_usb_e_celulares/CB293.jpg"
+        },
+        {
+            "nome": "Cabo USB/V8 De silicone 2 mts",
+            "tipo": "Acessórios eletrônicos, USB e Celulares",
+            "codigo": ["CB292"],
+            "descricao": "Cabo USB/V8 De silicone 2 mts",
+            "imagem": "./produtos/acessorios_eletronicos_usb_e_celulares/CB292.jpg"
+        },
+        {
+            "nome": "Banqueta Dobrável Pesca Camping",
+            "tipo": "Cozinha",
+            "codigo": ["BAQ01"],
+            "descricao": "Banqueta Dobrável Pesca Camping",
+            "imagem": "./produtos/cozinha/BAQ01.jpg"
+        },
+        {
+            "nome": "Caixa De Fogareiro De Madeira",
+            "tipo": "Cozinha",
+            "codigo": ["C014"],
+            "descricao": "Caixa De Fogareiro De Madeira",
+            "imagem": "./produtos/cozinha/C014.jpg"
+        },
+        {
+            "nome": "Fogareiro Inox 2 Bocas Pequeno",
+            "tipo": "Cozinha",
+            "codigo": ["E005"],
+            "descricao": "Fogareiro Inox 2 Bocas Pequeno",
+            "imagem": "./produtos/cozinha/E005.jpg"
+        },
+        {
+            "nome": "Fogareiro Inox 2 Bocas Pequeno Com 1/2 Chapa",
+            "tipo": "Cozinha",
+            "codigo": ["E004"],
+            "descricao": "Fogareiro Inox 2 Bocas Pequeno Com 1/2 Chapa",
+            "imagem": "./produtos/cozinha/E004.jpg"
+        },
+        {
+            "nome": "Torneira Corote",
+            "tipo": "Cozinha",
+            "codigo": ["TR-101"],
+            "descricao": "Torneira Corote",
+            "imagem": "./produtos/cozinha/TR-101.jpg"
+        },
+        {
+            "nome": "Borboleta Com Registro 5/16",
+            "tipo": "Cozinha",
+            "codigo": ["A025"],
+            "descricao": "Borboleta Com Registro 5/16",
+            "imagem": "./produtos/cozinha/A025.jpg"
+        },
+        {
+            "nome": "Registro 2 Pontas 5/16",
+            "tipo": "Cozinha",
+            "codigo": ["A010"],
+            "descricao": "Registro 2 Pontas 5/16",
+            "imagem": "./produtos/cozinha/A010.jpg"
+        },
+        {
+            "nome": "Engate Gás Completo 5/16",
+            "tipo": "Cozinha",
+            "codigo": ["K14"],
+            "descricao": "Engate Gás Completo 5/16",
+            "imagem": "./produtos/cozinha/K14.jpg"
+        },
+        {
+            "nome": "Desforçímetro 680kgf Com Soquetes 27/32/33MM",
+            "tipo": "Ferramentas",
+            "codigo": ["K5000"],
+            "descricao": "Desforçímetro 680kgf Com Soquetes 27/32/33MM",
+            "imagem": "./produtos/ferramentas/K5000.jpg"
+        },
+        {
+            "nome": "Chicote Elétrico 5,5 mts Com Tomadas",
+            "tipo": "Chicotes",
+            "codigo": ["CHMT-55"],
+            "descricao": "Chicote Elétrico 5,5 mts Com Tomadas",
+            "imagem": "./produtos/chicotes/CHMT-55.jpg"
+        },
+        {
+            "nome": "Engate Rápido M16 Completo",
+            "tipo": "Chicotes",
+            "codigo": ["EV-101"],
+            "descricao": "Engate Rápido M16 Completo",
+            "imagem": "./produtos/chicotes/EV-101.jpg"
+        },
+        {
+            "nome": "Tomada Macho",
+            "tipo": "Chicotes",
+            "codigo": ["TD-101"],
+            "descricao": "Tomada Macho",
+            "imagem": "./produtos/chicotes/TD-101.jpg"
+        },
+        {
+            "nome": "Tomada Fêmea",
+            "tipo": "Chicotes",
+            "codigo": ["TD-102"],
+            "descricao": "Tomada Fêmea",
+            "imagem": "./produtos/chicotes/TD-102.jpg"
+        },
+        {
+            "nome": "Lampada 67 Clear R5W",
+            "tipo": "Lâmpadas",
+            "codigo": ["24V: ASX2667", "12V: ASX2567"],
+            "descricao": "Lampada 67 Clear R5W",
+            "imagem": "./produtos/lampadas/ASX2667_ASX2567.jpg"
+        },
+        {
+            "nome": "Lâmpada H1 Clear",
+            "tipo": "Lâmpadas",
+            "codigo": ["12V: ASX2101", "24V: ASX2201"],
+            "descricao": "Lâmpada H1 Clear",
+            "imagem": "./produtos/lampadas/ASX2101_ASX2201.jpg"
+        },
+{
+            "nome": "Lâmpada H3 Clear",
+            "tipo": "Lâmpadas",
+            "codigo": ["12V ASX2103", "24V ASX2203"],
+            "descricao": "Lâmpada H3 Clear",
+            "imagem": "./produtos/lampadas/ASX2103_ASX2203.jpg"
+        },
+        {
+            "nome": "Lâmpada H7 Clear",
+            "tipo": "Lâmpadas",
+            "codigo": ["12V: ASX2107", "24V: ASX2207"],
+            "descricao": "Lâmpada H7 Clear",
+            "imagem": "./produtos/lampadas/ASX2107_ASX2207.jpg"
+        },
+        {
+            "nome": "Lâmpada H4 Clear",
+            "tipo": "Lâmpadas",
+            "codigo": ["12V: ASX2104", "24V: ASX2204"],
+            "descricao": "Lâmpada H4 Clear",
+            "imagem": "./produtos/lampadas/ASX2104_ASX2204.jpg"
+        },
+        {
+            "nome": "Lâmpada 1141 Âmbar 1 Polo",
+            "tipo": "Lâmpadas",
+            "codigo": ["12V: ASX2542", "24V: ASX2642"],
+            "descricao": "Lâmpada 1141 Âmbar 1 Polo",
+            "imagem": "./produtos/lampadas/ASX2542_ASX2642.jpg"
+        },
+        {
+            "nome": "Lâmpada 1141 Clear 1 Polo",
+            "tipo": "Lâmpadas",
+            "codigo": ["12V: ASX2541", "24V: ASX2641"],
+            "descricao": "Lâmpada 1141 Clear 1 Polo",
+            "imagem": "./produtos/lampadas/ASX2541_ASX2641.jpg"
+        },
+        {
+            "nome": "Lâmpada T5 Clear Pingo",
+            "tipo": "Lâmpadas",
+            "codigo": ["12V: ASX2506", "24V: ASX2606"],
+            "descricao": "Lâmpada T5 Clear Pingo",
+            "imagem": "./produtos/lampadas/ASX2506_ASX2606.jpg"
+        },
+        {
+            "nome": "Lâmpada T10 Cerâmica 6000K",
+            "tipo": "Lâmpadas",
+            "codigo": ["12V: ASX3001", "24V: ASX3002"],
+            "descricao": "Lâmpada T10 Cerâmica 6000K",
+            "imagem": "./produtos/lampadas/ASX3001_ASX3002.jpg"
+        },
+        {
+            "nome": "Par Ultra Led H11 4300K",
+            "tipo": "Lâmpadas",
+            "codigo": ["ASX1311"],
+            "descricao": "Par Ultra Led H11 4300K",
+            "imagem": "./produtos/lampadas/ASX1311.jpg"
+        },
+        {
+            "nome": "Par Ultra Led H7 4300K",
+            "tipo": "Lâmpadas",
+            "codigo": ["ASX1307"],
+            "descricao": "Par Ultra Led H7 4300K",
+            "imagem": "./produtos/lampadas/ASX1307.jpg"
+        },
+        {
+            "nome": "Par Ultra Led HB3/HB4 - 6000K",
+            "tipo": "Lâmpadas",
+            "codigo": ["ASX1006"],
+            "descricao": "Par Ultra Led HB3/HB4 - 6000K",
+            "imagem": "./produtos/lampadas/ASX1006.jpg"
+        },
+        {
+            "nome": "Par Ultra Led H1 6000K",
+            "tipo": "Lâmpadas",
+            "codigo": ["ASX1001"],
+            "descricao": "Par Ultra Led H1 6000K",
+            "imagem": "./produtos/lampadas/ASX1001.jpg"
+        },
+        {
+            "nome": "Par Ultra Led H4 4300K",
+            "tipo": "Lâmpadas",
+            "codigo": ["ASX1304"],
+            "descricao": "Par Ultra Led H4 4300K",
+            "imagem": "./produtos/lampadas/ASX1304.jpg"
+        },
+        {
+            "nome": "Lente Tricolor Tradicional",
+            "tipo": "Lentes e Lanternas",
+            "codigo": ["DGH37369"],
+            "descricao": "Lente Tricolor Tradicional",
+            "imagem": "./produtos/lentes_e_lanternas/DGH37369.jpg"
+        },
+        {
+            "nome": "Lanterna Lateral Com Suporte Cristal",
+            "tipo": "Lentes e Lanternas",
+            "codigo": ["DGH37141"],
+            "descricao": "Lanterna Lateral Com Suporte Cristal",
+            "imagem": "./produtos/lentes_e_lanternas/DGH37141.jpg"
+        },
+        {
+            "nome": "Lanterna Lateral Com Suporte Âmbar",
+            "tipo": "Lentes e Lanternas",
+            "codigo": ["DGH37139"],
+            "descricao": "Lanterna Lateral Com Suporte Âmbar",
+            "imagem": "./produtos/lentes_e_lanternas/DGH37139.jpg"
+        },
+        {
+            "nome": "Lanterna Lateral Sem Suporte Âmbar",
+            "tipo": "Lentes e Lanternas",
+            "codigo": ["DGH37142"],
+            "descricao": "Lanterna Lateral Sem Suporte Âmbar",
+            "imagem": "./produtos/lentes_e_lanternas/DGH37142.jpg"
+        },
+        {
+            "nome": "Lanterna Lateral Com Suporte Pequena Âmbar",
+            "tipo": "Lentes e Lanternas",
+            "codigo": ["DGH37100"],
+            "descricao": "Lanterna Lateral Com Suporte Pequena Âmbar",
+            "imagem": "./produtos/lentes_e_lanternas/DGH37100.jpg"
+        },
+        {
+            "nome": "Lanterna Lateral Sem Suporte Cristal",
+            "tipo": "Lentes e Lanternas",
+            "codigo": ["DGH37144"],
+            "descricao": "Lanterna Lateral Sem Suporte Cristal",
+            "imagem": "./produtos/lentes_e_lanternas/DGH37144.jpg"
         }
     ]
 }

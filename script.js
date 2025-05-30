@@ -146,12 +146,14 @@ function renderFilterButtons(categories) {
 // Functions to show/hide loading overlay
 function showLoading() {
     const loadingOverlay = document.getElementById('loading-overlay');
-    loadingOverlay.style.display = 'flex';
+    loadingOverlay.style.display = 'block';
+    document.body.style.overflow = 'hidden'; // Impede rolagem enquanto carrega
 }
 
 function hideLoading() {
     const loadingOverlay = document.getElementById('loading-overlay');
     loadingOverlay.style.display = 'none';
+    document.body.style.overflow = ''; // Restaura rolagem
 }
 
 // Função para gerar PDF do catálogo
