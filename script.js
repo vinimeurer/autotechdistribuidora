@@ -132,9 +132,9 @@ function renderFilterButtons(categories) {
         if (category !== 'all') {
             displayText = category.charAt(0).toUpperCase() + category.slice(1);
             // Only add 's' if the category doesn't already end with 's'
-            if (!category.endsWith('s')) {
-                displayText += 's';
-            }
+            // if (!category.endsWith('s')) {
+            //     displayText += 's';
+            // }
         }
         
         button.textContent = displayText;
@@ -160,32 +160,61 @@ function hideLoading() {
 function generateCatalogPDF() {
     showLoading();
     
-    loadMenuData().then(products => {
+    loadMenuData().then(async (products) => {
         if (!products || products.length === 0) {
             hideLoading();
             alert('Não foi possível carregar os produtos para o PDF.');
             return;
         }
+        
+        // Correctly initialize jsPDF
+        const { jsPDF } = window.jspdf;
+        
+        const pdf = new jsPDF({
+            orientation: 'portrait',
+            unit: 'mm',
+            format: 'a4'
+        });
 
-        // Create a temporary div for PDF content
-        const pdfContainer = document.createElement('div');
-        pdfContainer.id = 'temp-pdf-content';
-        pdfContainer.style.width = '190mm';
-        document.body.appendChild(pdfContainer);
+        // Get page dimensions
+        const pageWidth = pdf.internal.pageSize.getWidth();
+        const pageHeight = pdf.internal.pageSize.getHeight();
+        const margin = 15;
+        const usableWidth = pageWidth - 2 * margin;
+        
+        // Helper function to convert image URL to base64
+        const getImageAsBase64 = async (imageUrl) => {
+            try {
+                return new Promise((resolve, reject) => {
+                    const img = new Image();
+                    img.crossOrigin = 'Anonymous';
+                    img.onload = () => {
+                        const canvas = document.createElement('canvas');
+                        canvas.width = img.width;
+                        canvas.height = img.height;
+                        const ctx = canvas.getContext('2d');
+                        ctx.drawImage(img, 0, 0);
+                        resolve(canvas.toDataURL('image/jpeg'));
+                    };
+                    img.onerror = () => {
+                        reject(new Error('Failed to load image'));
+                    };
+                    img.src = imageUrl;
+                });
+            } catch (error) {
+                console.error('Error loading image:', error);
+                return null;
+            }
+        };
 
-        // Add header
-        pdfContainer.innerHTML = `
-            <div style="margin-bottom: 20px; padding-top: 15px;">
-                <p style="color: #333; margin-bottom: 10px; font-size: 28px;">
-                    Catálogo de Produtos - Autotech Distribuidora
-                </p>
-                <p style="color: #666; font-size: 14px;">
-                    Data: ${new Date().toLocaleDateString()}
-                </p>
-                <hr style="margin: 15px 0; border-top: 2px solid #ddd;">
-            </div>
-        `;
-
+        // Add cover page
+        pdf.setFontSize(28);
+        pdf.text('Catálogo de Produtos', pageWidth / 2, 80, { align: 'center' });
+        pdf.setFontSize(20);
+        pdf.text('Autotech Distribuidora', pageWidth / 2, 100, { align: 'center' });
+        pdf.setFontSize(12);
+        pdf.text(`Data: ${new Date().toLocaleDateString()}`, pageWidth / 2, 120, { align: 'center' });
+        
         // Group products by category
         const categories = {};
         products.forEach(product => {
@@ -197,123 +226,129 @@ function generateCatalogPDF() {
             }
             categories[category].push(product);
         });
-
-        // Add each category and its products with controlled pagination
+        
+        // Process each category
+        let currentCategory = 0;
         const categoryNames = Object.keys(categories).sort();
         
-        let currentPage = pdfContainer;
-        let itemsOnCurrentPage = 0;
-        const ITEMS_PER_PAGE = 7;
-        
-        // Function to create a new page
-        function createNewPage() {
-            const newPage = document.createElement('div');
-            newPage.style.pageBreakBefore = 'always';
-            newPage.style.padding = '10mm 0';
-            pdfContainer.appendChild(newPage);
-            return newPage;
-        }
-        
-        categoryNames.forEach((category, categoryIndex) => {
-            const productsInCategory = categories[category];
-            
-            // For each category, create a category header
-            const categoryHeader = document.createElement('div');
-            categoryHeader.innerHTML = `
-                <h2 style="color: #333; border-bottom: 2px solid #333; padding-bottom: 6px; 
-                     margin: 20px 0 15px 0; font-size: 22px;">
-                    ${category.charAt(0).toUpperCase() + category.slice(1)}
-                </h2>
-            `;
-            
-            // If adding category header would exceed items per page,
-            // or if it's not the first category, start a new page
-            if (itemsOnCurrentPage > 0 && (itemsOnCurrentPage >= ITEMS_PER_PAGE || categoryIndex > 0)) {
-                currentPage = createNewPage();
-                itemsOnCurrentPage = 0;
+        // Process all categories one by one
+        for (const category of categoryNames) {
+            // Add new page for each category (except first one on page 2)
+            if (currentCategory > 0 || currentCategory === 0) {
+                pdf.addPage();
             }
             
-            // Add category header to current page
-            currentPage.appendChild(categoryHeader);
+            let currentY = margin;
             
-            // Add products for this category
-            productsInCategory.forEach((product, productIndex) => {
-                // Create codes HTML
-                let codesHTML = '';
-                if (product.codigo && product.codigo.length) {
-                    const codes = Array.isArray(product.codigo) ? product.codigo : [product.codigo];
-                    codesHTML = codes.map(code => 
-                        `<span style="display: inline-block; background-color: #f0f0f0; padding: 3px 8px; 
-                         border-radius: 3px; margin: 2px; font-size: 12px;">Código: ${code}</span>`
-                    ).join('');
+            // Add category header
+            pdf.setFontSize(16);
+            pdf.setFont(undefined, 'bold');
+            pdf.text(category.charAt(0).toUpperCase() + category.slice(1), margin, currentY);
+            currentY += 8;
+            
+            // Draw a line
+            pdf.line(margin, currentY, pageWidth - margin, currentY);
+            currentY += 10;
+            
+            // Process products in this category
+            pdf.setFont(undefined, 'normal');
+            
+            for (const product of categories[category]) {
+                // Define product section height (estimate based on content)
+                const productSectionHeight = 40; // Approx height for product block
+                
+                // Check if we need a new page - leave 30mm margin at bottom
+                if (currentY + productSectionHeight > pageHeight - 30) {
+                    pdf.addPage();
+                    currentY = margin;
+                    
+                    // Add category continuation header
+                    pdf.setFontSize(16);
+                    pdf.setFont(undefined, 'bold');
+                    pdf.text(`${category.charAt(0).toUpperCase() + category.slice(1)} (cont.)`, margin, currentY);
+                    currentY += 8;
+                    
+                    // Draw a line
+                    pdf.line(margin, currentY, pageWidth - margin, currentY);
+                    currentY += 10;
+                    pdf.setFont(undefined, 'normal');
                 }
                 
-                // Create product item
-                const productItem = document.createElement('div');
-                productItem.innerHTML = `
-                    <div style="display: flex; padding: 8px; border: 1px solid #ddd; border-radius: 5px; 
-                         margin-bottom: 10px; height: 105px;">
-                        <div style="flex: 0 0 90px; margin-right: 10px;">
-                            <img src="${product.imagem}" style="width: 90px; height: 90px; object-fit: contain;" 
-                                 alt="${product.nome || 'Produto'}">
-                        </div>
-                        <div style="flex: 1; min-width: 0;">
-                            <h3 style="margin-bottom: 3px; font-size: 15px;">${product.nome || 'Sem nome'}</h3>
-                            <p style="color: #666; margin-bottom: 6px; font-size: 13px;">${product.descricao || ''}</p>
-                            <div style="display: flex; flex-wrap: wrap; gap: 3px;">
-                                ${codesHTML}
-                            </div>
-                        </div>
-                    </div>
-                `;
+                // Starting Y position for this product
+                const productStartY = currentY;
                 
-                // Increment counter
-                itemsOnCurrentPage++;
-                
-                // Add product to current page
-                currentPage.appendChild(productItem);
-                
-                // If we've reached the limit per page and there are more products,
-                // start a new page for the next products
-                if (itemsOnCurrentPage >= ITEMS_PER_PAGE && 
-                   (productIndex < productsInCategory.length - 1 || categoryIndex < categoryNames.length - 1)) {
-                    currentPage = createNewPage();
-                    itemsOnCurrentPage = 0;
+                // Try to load and add the image
+                try {
+                    // Load image as base64
+                    const imageData = await getImageAsBase64(product.imagem);
+                    
+                    if (imageData) {
+                        // Calculate image dimensions while maintaining aspect ratio
+                        const imgWidth = 25; // mm - fixed width
+                        const imgHeight = 25; // mm - fixed height for consistency
+                        
+                        // Add image to PDF
+                        pdf.addImage(
+                            imageData, 
+                            'JPEG', 
+                            margin, 
+                            currentY, 
+                            imgWidth, 
+                            imgHeight
+                        );
+                    }
+                } catch (error) {
+                    console.error('Error adding image for product:', product.nome, error);
                 }
-            });
-        });
-
-        // Wait for images to load
-        setTimeout(() => {
-            // Generate PDF with fixed layout
-            const opt = {
-                margin: [15, 15, 15, 15], // top, right, bottom, left
-                filename: 'catalogo-produtos.pdf',
-                image: { type: 'jpeg', quality: 0.95 },
-                html2canvas: { 
-                    scale: 2, 
-                    useCORS: true, 
-                    logging: false,
-                    letterRendering: true
-                },
-                jsPDF: { 
-                    unit: 'mm', 
-                    format: 'a4', 
-                    orientation: 'portrait',
-                    compress: true
+                
+                // Product name - positioned to the right of image
+                pdf.setFontSize(12);
+                pdf.setFont(undefined, 'bold');
+                pdf.text(product.nome || 'Sem nome', margin + 30, currentY + 5);
+                
+                // Product codes
+                pdf.setFontSize(10);
+                pdf.setFont(undefined, 'normal');
+                
+                let codeText = 'Código: ';
+                if (typeof product.codigo === 'string') {
+                    codeText += product.codigo;
+                } else if (Array.isArray(product.codigo)) {
+                    codeText += product.codigo.join(', ');
                 }
-            };
-
-            html2pdf().from(pdfContainer).set(opt).save().then(() => {
-                hideLoading();
-                document.body.removeChild(pdfContainer);
-            }).catch(err => {
-                hideLoading();
-                console.error('Erro ao gerar PDF:', err);
-                alert('Erro ao gerar o PDF. Verifique o console para mais detalhes.');
-                document.body.removeChild(pdfContainer);
-            });
-        }, 1500);
+                
+                pdf.text(codeText, margin + 30, currentY + 12);
+                
+                // Description (truncated)
+                if (product.descricao) {
+                    const maxChars = 100;
+                    const description = product.descricao.length > maxChars ? 
+                        product.descricao.substring(0, maxChars) + '...' : product.descricao;
+                    
+                    pdf.setFontSize(9);
+                    const textLines = pdf.splitTextToSize(description, usableWidth - 35); // Account for image width
+                    pdf.text(textLines, margin + 30, currentY + 19);
+                }
+                
+                // Move down for next product - at least the height of the image plus spacing
+                currentY += 35;
+                
+                // Draw a separator line
+                pdf.setDrawColor(200, 200, 200); // Light gray
+                pdf.line(margin, currentY, pageWidth - margin, currentY);
+                pdf.setDrawColor(0, 0, 0); // Reset to black
+                
+                // Add spacing after separator
+                currentY += 7;
+            }
+            
+            currentCategory++;
+        }
+        
+        // Save the PDF
+        pdf.save('catalogo-produtos.pdf');
+        hideLoading();
+        
     }).catch(err => {
         hideLoading();
         console.error('Erro ao carregar dados:', err);

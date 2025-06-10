@@ -370,10 +370,10 @@
         },
         {
             "nome": "Desforçímetro 680kgf Com Soquetes 27/32/33MM",
-            "tipo": "Ferramentas",
+            "tipo": "Ferramentas e Instalação",
             "codigo": ["K5000"],
             "descricao": "Desforçímetro 680kgf Com Soquetes 27/32/33MM",
-            "imagem": "./produtos/ferramentas/K5000.jpg"
+            "imagem": "./produtos/ferramentas_e_instalacao/K5000.jpg"
         },
         {
             "nome": "Chicote Elétrico 5,5 mts Com Tomadas",
@@ -542,6 +542,374 @@
             "codigo": ["DGH37144"],
             "descricao": "Lanterna Lateral Sem Suporte Cristal",
             "imagem": "./produtos/lentes_e_lanternas/DGH37144.jpg"
+        },
+
+
+
+
+
+
+
+
+
+
+        {
+            "nome": "Tee 10x10x10 MM",
+            "tipo": "Conexões",
+            "codigo": ["M025"],
+            "descricao": "Tee 10x10x10 MM",
+            "imagem": "./produtos/conexoes/M025.jpg"
+        },
+        {
+            "nome": "Tee 12x12x12 MM",
+            "tipo": "Conexões",
+            "codigo": ["M026"],
+            "descricao": "Tee 12x12x12 MM",
+            "imagem": "./produtos/conexoes/M026.jpg"
+        },
+        {
+            "nome": "Emenda 10x10 MM",
+            "tipo": "Conexões",
+            "codigo": ["M020"],
+            "descricao": "Emenda 10x10 MM",
+            "imagem": "./produtos/conexoes/M020.jpg"
+        },
+        {
+            "nome": "Emenda 8x8 MM",
+            "tipo": "Conexões",
+            "codigo": ["M19"],
+            "descricao": "Emenda 8x8 MM",
+            "imagem": "./produtos/conexoes/M19.jpg"
+        },
+        {
+            "nome": "Emenda 12x12 MM",
+            "tipo": "Conexões",
+            "codigo": ["M021"],
+            "descricao": "Emenda 12x12 MM",
+            "imagem": "./produtos/conexoes/M021.jpg"
+        },
+        {
+            "nome": "Emenda 6x6 MM",
+            "tipo": "Conexões",
+            "codigo": ["M018"],
+            "descricao": "Emenda 6x6 MM",
+            "imagem": "./produtos/conexoes/M018.jpg"
+        },
+        {
+            "nome": "Emenda 4x4 MM",
+            "tipo": "Conexões",
+            "codigo": ["M017"],
+            "descricao": "Emenda 4x4 MM",
+            "imagem": "./produtos/conexoes/M017.jpg"
+        },
+        {
+            "nome": "Válvula Dreno M22 Aço",
+            "tipo": "Conexões",
+            "codigo": ["M104"],
+            "descricao": "Válvula Dreno M22 Aço",
+            "imagem": "./produtos/conexoes/M104.jpg"
+        },
+        {
+            "nome": "Válvula Dreno M22 X 1,5 Latão",
+            "tipo": "Conexões",
+            "codigo": ["M239"],
+            "descricao": "Válvula Dreno M22 X 1,5 Latão",
+            "imagem": "./produtos/conexoes/M239.jpg"
+        },
+        {
+            "nome": "Chicote Relê 5 Pinos",
+            "tipo": "Chicotes",
+            "codigo": ["CX05.7595"],
+            "descricao": "Chicote Relê 5 Pinos",
+            "imagem": "./produtos/chicotes/CX05.7595.jpg"
+        },
+        {
+            "nome": "Chicote Reparo Alternador 5V",
+            "tipo": "Chicotes",
+            "codigo": ["CX05.7599"],
+            "descricao": "Chicote Reparo Alternador 5V",
+            "imagem": "./produtos/chicotes/CX05.7599.jpg"
+        },
+        {
+            "nome": "Chicote Reparo 4V",
+            "tipo": "Chicotes",
+            "codigo": ["CX04.7664"],
+            "descricao": "Chicote Reparo 4V",
+            "imagem": "./produtos/chicotes/CX04.7664.jpg"
+        },
+        {
+            "nome": "Chicote Sensor Temperatura 2V",
+            "tipo": "Chicotes",
+            "codigo": ["CX02.7743"],
+            "descricao": "Chicote Sensor Temperatura 2V",
+            "imagem": "./produtos/chicotes/CX02.7743.jpg"
+        },
+        {
+            "nome": "Chicote Lanterna 7V Scania/MB/Volvo Fêmea",
+            "tipo": "Chicotes",
+            "codigo": ["CX07.7665"],
+            "descricao": "Chicote Lanterna 7V Scania/MB/Volvo Fêmea",
+            "imagem": "./produtos/chicotes/CX07.7665.jpg"
+        },
+        {
+            "nome": "Chicote Soquete Farol Lâmpada H4",
+            "tipo": "Chicotes",
+            "codigo": ["CX03.7090"],
+            "descricao": "Chicote Soquete Farol Lâmpada H4",
+            "imagem": "./produtos/chicotes/CX03.7090.jpg"
+        },
+        {
+            "nome": "Chicote 5V Lanterna Guerra/Randon/Librelato",
+            "tipo": "Chicotes",
+            "codigo": ["CX05.7760"],
+            "descricao": "Chicote 5V Lanterna Guerra/Randon/Librelato",
+            "imagem": "./produtos/chicotes/CX05.7760.jpg"
+        },
+        {
+            "nome": "Chicote Porta Fusível 2.5MM",
+            "tipo": "Chicotes",
+            "codigo": ["CX02.7198A"],
+            "descricao": "Chicote Porta Fusível 2.5MM",
+            "imagem": "./produtos/chicotes/CX02.7198A.jpg"
+        },
+        {
+            "nome": "Chicote 2V Selado",
+            "tipo": "Chicotes",
+            "codigo": ["CX02.7731"],
+            "descricao": "Chicote 2V Selado",
+            "imagem": "./produtos/chicotes/CX02.7731.jpg"
+        },
+
+        {
+            "nome": "Lanterna Teto Cabine Led Universal",
+            "tipo": "Lentes e Lanternas",
+            "codigo": ["DGH37376"],
+            "descricao": "Lanterna Teto Cabine Led Universal",
+            "imagem": "./produtos/lentes_e_lanternas/DGH37376.jpg"
+        },
+        {
+            "nome": "Lanterna Lateral Facchini S/Suporte Cristal",
+            "tipo": "Lentes e Lanternas",
+            "codigo": ["DGH37197"],
+            "descricao": "Lanterna Lateral Facchini S/Suporte Cristal",
+            "imagem": "./produtos/lentes_e_lanternas/DGH37197.jpg"
+        },
+        {
+            "nome": "Lanterna Lateral Facchini S/Suporte Âmbar",
+            "tipo": "Lentes e Lanternas",
+            "codigo": ["DGH37195"],
+            "descricao": "Lanterna Lateral Facchini S/Suporte Âmbar",
+            "imagem": "./produtos/lentes_e_lanternas/DGH37195.jpg"
+        },
+        {
+            "nome": "Lanterna Delimitadora Âmbar",
+            "tipo": "Lentes e Lanternas",
+            "codigo": ["DGH37145"],
+            "descricao": "Lanterna Delimitadora Âmbar",
+            "imagem": "./produtos/lentes_e_lanternas/DGH37145.jpg"
+        },
+        {
+            "nome": "Lanterna Delimitadora Vermelho",
+            "tipo": "Lentes e Lanternas",
+            "codigo": ["DGH37146"],
+            "descricao": "Lanterna Delimitadora Vermelho",
+            "imagem": "./produtos/lentes_e_lanternas/DGH37146.jpg"
+        },
+        {
+            "nome": "Lanterna Delimitadora Cristal",
+            "tipo": "Lentes e Lanternas",
+            "codigo": ["DGH37147"],
+            "descricao": "Lanterna Delimitadora Cristal",
+            "imagem": "./produtos/lentes_e_lanternas/DGH37147.jpg"
+        },
+        {
+            "nome": "Lanterna De Posição Lateral E Direcional",
+            "tipo": "Lentes e Lanternas",
+            "codigo": ["DGH37375"],
+            "descricao": "Lanterna De Posição Lateral E Direcional",
+            "imagem": "./produtos/lentes_e_lanternas/DGH37375.jpg"
+        },
+        {
+            "nome": "Lanterna Lateral Exclusive Com Suporte Com Vigia",
+            "tipo": "Lentes e Lanternas",
+            "codigo": ["DGH37254"],
+            "descricao": "Lanterna Lateral Exclusive Com Suporte Com Vigia",
+            "imagem": "./produtos/lentes_e_lanternas/DGH37254.jpg"
+        },
+        {
+            "nome": "Lanterna Led Tapa-Sol Com Conector",
+            "tipo": "Lentes e Lanternas",
+            "codigo": ["DGH37318 (Âmbar)", "DGH37320 (Branca)"],
+            "descricao": "Lanterna Led Tapa-Sol Com Conecctor",
+            "imagem": "./produtos/lentes_e_lanternas/DGH37318_DGH37320.jpg"
+        },
+        {
+            "nome": "Lente Traseira Tradicional",
+            "tipo": "Lentes e Lanternas",
+            "codigo": ["DGH37360"],
+            "descricao": "Lente Traseira Tradicional",
+            "imagem": "./produtos/lentes_e_lanternas/DGH37360.jpg"
+        },
+        {
+            "nome": "Conjunto 5 Marias - Bojuda",
+            "tipo": "Lentes e Lanternas",
+            "codigo": ["DGH37286"],
+            "descricao": "Conjunto 5 Marias - Bojuda",
+            "imagem": "./produtos/lentes_e_lanternas/DGH37286.jpg"
+        },
+        {
+            "nome": "Suporte Lanterna Facchini",
+            "tipo": "Suportes Lanternas",
+            "codigo": ["DGH37200"],
+            "descricao": "Suporte Lanterna Facchini",
+            "imagem": "./produtos/suportes_lanternas/DGH37200.jpg"
+        },
+        {
+            "nome": "Farol Auxiliar 42w Fino Redondo 14 Leds Bivolt",
+            "tipo": "Farol Auxiliar",
+            "codigo": ["TP-1642"],
+            "descricao": "Farol Auxiliar 42w Fino Redondo 14 Leds Bivolt",
+            "imagem": "./produtos/farol_auxiliar/TP-1642.jpg"
+        },
+        {
+            "nome": "Farol Auxiliar 99w Fino Redondo 33 Leds Bivolt",
+            "tipo": "Farol Auxiliar",
+            "codigo": ["MO-99W-Y"],
+            "descricao": "Farol Auxiliar 99w Fino Redondo 33 Leds Bivolt",
+            "imagem": "./produtos/farol_auxiliar/MO-99W-Y.jpg"
+        },
+        {
+            "nome": "Farol Auxiliar 24w Retângular 16 Leds Bivolt",
+            "tipo": "Farol Auxiliar",
+            "codigo": ["TP-8324"],
+            "descricao": "Farol Auxiliar 24w Retângular 16 Leds Bivolt",
+            "imagem": "./produtos/farol_auxiliar/TP-8324.jpg"
+        },
+        {
+            "nome": "Farol Auxiliar 48w Fino Quadrado 16 Leds Bivolt",
+            "tipo": "Farol Auxiliar",
+            "codigo": ["TP-1648"],
+            "descricao": "Farol Auxiliar 48w Fino Quadrado 16 Leds Bivolt",
+            "imagem": "./produtos/farol_auxiliar/TP-1648.jpg"
+        },
+        {
+            "nome": "Barra Led 288w 96 Leds Bivolt",
+            "tipo": "Farol Auxiliar",
+            "codigo": ["TP-288W-SMD"],
+            "descricao": "Barra Led 288w 96 Leds Bivolt",
+            "imagem": "./produtos/farol_auxiliar/TP-288W-SMD.jpg"
+        },
+        {
+            "nome": "Aparelho De Som Carro Automotivo Bluetooth",
+            "tipo": "Rádio e Acessórios",
+            "codigo": ["MR-3003"],
+            "descricao": "Aparelho De Som Carro Automotivo Bluetooth",
+            "imagem": "./produtos/radio_e_acessorios/MR-3003.jpg"
+        },
+        {
+            "nome": "Botão Tic Tac Redondo 2 Posições (2 Pinos)",
+            "tipo": "Chave Auxiliar",
+            "codigo": ["ASX8301"],
+            "descricao": "Botão Tic Tac Redondo 2 Posições (2 Pinos)",
+            "imagem": "./produtos/chave_auxiliar/ASX8301.jpg"
+        },
+        {
+            "nome": "Botão Tic Tac Quadrado 2 Posições (2 Pinos)",
+            "tipo": "Chave Auxiliar",
+            "codigo": ["MO-33"],
+            "descricao": "Botão Tic Tac Quadrado 2 Posições (2 Pinos)",
+            "imagem": "./produtos/chave_auxiliar/MO-33.jpg"
+        },
+        {
+            "nome": "Botão Tic Tac Quadrado 2 Posições (6 Pinos)",
+            "tipo": "Chave Auxiliar",
+            "codigo": ["MR-329"],
+            "descricao": "Botão Tic Tac Quadrado 2 Posições (6 Pinos)",
+            "imagem": "./produtos/chave_auxiliar/MR-329.jpg"
+        },
+        {
+            "nome": "Cinta Plástica Nylon Tamanho 4x100",
+            "tipo": "Ferramentas e Instalação",
+            "codigo": ["MU-N4100"],
+            "descricao": "Cinta Plástica Nylon Tamanho 4x100",
+            "imagem": "./produtos/ferramentas_e_instalacao/MU-N4100.jpg"
+        },
+        {
+            "nome": "Cinta Plástica Nylon Tamanho 4x200",
+            "tipo": "Ferramentas e Instalação",
+            "codigo": ["MU-N4200"],
+            "descricao": "Cinta Plástica Nylon Tamanho 4x200",
+            "imagem": "./produtos/ferramentas_e_instalacao/MU-N4200.jpg"
+        },
+        {
+            "nome": "Cinta Plástica Nylon Tamanho 4x300",
+            "tipo": "Ferramentas e Instalação",
+            "codigo": ["MU-N4*300"],
+            "descricao": "Cinta Plástica Nylon Tamanho 4x300",
+            "imagem": "./produtos/ferramentas_e_instalacao/MU-N4300.jpg"
+        },
+        {
+            "nome": "Luminária Interna/Luz De Leitura 25X6cm",
+            "tipo": "Luminária Interna",
+            "codigo": ["MO-2329"],
+            "descricao": "Luminária Interna/Luz De Leitura 25X6cm",
+            "imagem": "./produtos/luminaria_interna/MO-2329.jpg"
+        },
+        {
+            "nome": "Luminária Interna/Luz De Leitura 15X6cm",
+            "tipo": "Luminária Interna",
+            "codigo": ["MO-2328"],
+            "descricao": "Luminária Interna/Luz De Leitura 15X6cm",
+            "imagem": "./produtos/luminaria_interna/MO-2328.jpg"
+        },
+        {
+            "nome": "Faixa De Para-Choque Honesty 10X2,5cm",
+            "tipo": "Faixas",
+            "codigo": ["TP-10CM"],
+            "descricao": "Faixa De Para-Choque Honesty 10X2,5cm",
+            "imagem": "./produtos/faixas/TP-10CM.jpg"
+        },
+        {
+            "nome": "Faixa Refletiva Honesty 30X5cm",
+            "tipo": "Faixas",
+            "codigo": ["TP-5CM"],
+            "descricao": "Faixa Refletiva Honesty 30X5cm",
+            "imagem": "./produtos/faixas/TP-5CM.jpg"
+        },
+        {
+            "nome": "Espelho Retrovisor Mega 170MM",
+            "tipo": "Acessórios PX e Espelhos",
+            "codigo": ["10205"],
+            "descricao": "Espelho Retrovisor Mega 170MM",
+            "imagem": "./produtos/acessorios_px_e_espelhos/10205.jpg"
+        },
+        {
+            "nome": "Espelho Retrovisor Master 130MM",
+            "tipo": "Acessórios PX e Espelhos",
+            "codigo": ["10201"],
+            "descricao": "Espelho Retrovisor Master 130MM",
+            "imagem": "./produtos/acessorios_px_e_espelhos/10201.jpg"
+        },
+        {
+            "nome": "Suporte 7 Marias - Bojuda",
+            "tipo": "Suportes Lanternas",
+            "codigo": ["DGH37297"],
+            "descricao": "Suporte 7 Marias - Bojuda",
+            "imagem": "./produtos/suportes_lanternas/DGH37297.jpg"
+        },
+        {
+            "nome": "Suporte 3 Marias - 85MM",
+            "tipo": "Suportes Lanternas",
+            "codigo": ["DGH37303"],
+            "descricao": "Suporte 3 Marias - 85MM",
+            "imagem": "./produtos/suportes_lanternas/DGH37303.jpg"
+        },
+        {
+            "nome": "Suporte 7 Marias - 85MM",
+            "tipo": "Suportes Lanternas",
+            "codigo": ["DGH37315"],
+            "descricao": "Suporte 7 Marias - 85MM",
+            "imagem": "./produtos/suportes_lanternas/DGH37315.jpg"
         }
     ]
 }
