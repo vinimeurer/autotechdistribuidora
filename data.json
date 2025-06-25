@@ -910,6 +910,123 @@
             "codigo": ["DGH37315"],
             "descricao": "Suporte 7 Marias - 85MM",
             "imagem": "./produtos/suportes_lanternas/DGH37315.jpg"
+        },
+
+
+
+
+
+
+
+
+
+
+
+
+        {
+            "nome": "Aparabarro Liso 700 x 600",
+            "tipo": "Aparabarros",
+            "codigo": ["AST728"],
+            "descricao": "Aparabarro Liso 700 x 600",
+            "imagem": "./produtos/aparabarros/AST728.jpg"
+        },
+        {
+            "nome": "Aparabarro Guerra Traseiro 715 x 550",
+            "tipo": "Aparabarros",
+            "codigo": ["AST320"],
+            "descricao": "Aparabarro Guerra Traseiro 715 x 550",
+            "imagem": "./produtos/aparabarros/AST320.jpg"
+        },
+        {
+            "nome": "Aparabarro MB Dianteiro 540 x 440",
+            "tipo": "Aparabarros",
+            "codigo": ["AST325"],
+            "descricao": "Aparabarro MB Dianteiro 540 x 440",
+            "imagem": "./produtos/aparabarros/AST325.jpg"
+        },
+        {
+            "nome": "Aparabarro MB Traseiro 680 x 450",
+            "tipo": "Aparabarros",
+            "codigo": ["AST324"],
+            "descricao": "Aparabarro MB Traseiro 680 x 450",
+            "imagem": "./produtos/aparabarros/AST324.jpg"
+        },
+        {
+            "nome": "Aparabarro VW Traseiro 500 x 490",
+            "tipo": "Aparabarros",
+            "codigo": ["AST337"],
+            "descricao": "Aparabarro VW Traseiro 500 x 490",
+            "imagem": "./produtos/aparabarros/AST337.jpg"
+        },
+        {
+            "nome": "Aparabarro VW Dianteiro 500 x 490",
+            "tipo": "Aparabarros",
+            "codigo": ["AST336"],
+            "descricao": "Aparabarro VW Dianteiro 500 x 490",
+            "imagem": "./produtos/aparabarros/AST336.jpg"
+        },
+        {
+            "nome": "Aparabarro Volvo Traseiro 645 x 440",
+            "tipo": "Aparabarros",
+            "codigo": ["AST304"],
+            "descricao": "Aparabarro Volvo Traseiro 645 x 440",
+            "imagem": "./produtos/aparabarros/AST304.jpg"
+        },
+        {
+            "nome": "Aparabarro Volvo Dianteiro 510 x 320",
+            "tipo": "Aparabarros",
+            "codigo": ["AST305"],
+            "descricao": "Aparabarro Volvo Dianteiro 510 x 320",
+            "imagem": "./produtos/aparabarros/AST305.jpg"
+        },
+        {
+            "nome": "Aparabarro DAF 620 x 360",
+            "tipo": "Aparabarros",
+            "codigo": ["AST385"],
+            "descricao": "Aparabarro DAF 620 x 360",
+            "imagem": "./produtos/aparabarros/AST385.jpg"
+        },
+        {
+            "nome": "Aparabarro Scania Traseiro 600 x 360",
+            "tipo": "Aparabarros",
+            "codigo": ["AST302"],
+            "descricao": "Aparabarro Scania Traseiro 600 x 360",
+            "imagem": "./produtos/aparabarros/AST302.jpg"
+        },
+        {
+            "nome": "Aparabarro Scania Dianteiro 500 x 360",
+            "tipo": "Aparabarros",
+            "codigo": ["AST300"],
+            "descricao": "Aparabarro Scania Dianteiro 500 x 360",
+            "imagem": "./produtos/aparabarros/AST300.jpg"
+        },
+        {
+            "nome": "Aparabarro Randon New Traseiro 570 x 610",
+            "tipo": "Aparabarros",
+            "codigo": ["AST671"],
+            "descricao": "Aparabarro Randon New Traseiro 570 x 610",
+            "imagem": "./produtos/aparabarros/AST671.jpg"
+        },
+        {
+            "nome": "Aparabarro Randon Moderno Traseiro 680 x 450",
+            "tipo": "Aparabarros",
+            "codigo": ["AST306"],
+            "descricao": "Aparabarro Randon Moderno Traseiro 680 x 450",
+            "imagem": "./produtos/aparabarros/AST306.jpg"
+        },
+        {
+            "nome": "Aparabarro Dianteiro Dianteiro 460 x 230",
+            "tipo": "Aparabarros",
+            "codigo": ["AST431"],
+            "descricao": "Aparabarro Dianteiro Dianteiro 460 x 230",
+            "imagem": "./produtos/aparabarros/AST431.jpg"
+        },
+        {
+            "nome": "Aparabarro Facchini 600 x 500",
+            "tipo": "Aparabarros",
+            "codigo": ["AST329"],
+            "descricao": "Aparabarro Facchini 600 x 500",
+            "imagem": "./produtos/aparabarros/AST329.jpg"
         }
     ]
 }
